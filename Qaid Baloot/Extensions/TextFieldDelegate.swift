@@ -22,6 +22,7 @@ extension MainViewController: UITextFieldDelegate {
         if textField.text == "" {
             textField.text = "0"
         }
+        textField.resignFirstResponder()
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

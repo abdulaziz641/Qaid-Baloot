@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89181162224AC6B30011BCA1 /* MainAppLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89181161224AC6B30011BCA1 /* MainAppLabel.swift */; };
+		89181164224AC7160011BCA1 /* MainAppTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89181163224AC7160011BCA1 /* MainAppTextField.swift */; };
+		8939DD5D22589D8900987BA8 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8939DD5C22589D8900987BA8 /* Result.swift */; };
+		8939DD61225BCE8F00987BA8 /* ResultTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8939DD60225BCE8F00987BA8 /* ResultTableView.swift */; };
+		8939DD6322650FD600987BA8 /* ResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8939DD6222650FD600987BA8 /* ResultCell.swift */; };
+		8939DD672267AC0D00987BA8 /* TextFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8939DD662267AC0D00987BA8 /* TextFieldType.swift */; };
+		8939DD692267AC2E00987BA8 /* AppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8939DD682267AC2E00987BA8 /* AppButton.swift */; };
+		8939DD6B2267AC5500987BA8 /* LabelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8939DD6A2267AC5500987BA8 /* LabelType.swift */; };
+		8939DD712267ADCD00987BA8 /* MainVC+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8939DD702267ADCD00987BA8 /* MainVC+UITableViewDelegate.swift */; };
 		89BC583F223C33A50025D7A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BC583E223C33A50025D7A2 /* AppDelegate.swift */; };
 		89BC5841223C33A50025D7A2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BC5840223C33A50025D7A2 /* MainViewController.swift */; };
 		89BC5847223C33A50025D7A2 /* Qaid_Baloot.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 89BC5845223C33A50025D7A2 /* Qaid_Baloot.xcdatamodeld */; };
@@ -15,9 +24,19 @@
 		89BC585622419D4C0025D7A2 /* UIViewController+UIResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BC585522419D4C0025D7A2 /* UIViewController+UIResponder.swift */; };
 		89BC5858224551080025D7A2 /* SetupLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BC5857224551080025D7A2 /* SetupLayout.swift */; };
 		89BC585A224558040025D7A2 /* TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BC5859224558040025D7A2 /* TextFieldDelegate.swift */; };
+		89BC58602245592B0025D7A2 /* MainAppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BC585F2245592B0025D7A2 /* MainAppButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		89181161224AC6B30011BCA1 /* MainAppLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppLabel.swift; sourceTree = "<group>"; };
+		89181163224AC7160011BCA1 /* MainAppTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppTextField.swift; sourceTree = "<group>"; };
+		8939DD5C22589D8900987BA8 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		8939DD60225BCE8F00987BA8 /* ResultTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableView.swift; sourceTree = "<group>"; };
+		8939DD6222650FD600987BA8 /* ResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCell.swift; sourceTree = "<group>"; };
+		8939DD662267AC0D00987BA8 /* TextFieldType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldType.swift; sourceTree = "<group>"; };
+		8939DD682267AC2E00987BA8 /* AppButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppButton.swift; sourceTree = "<group>"; };
+		8939DD6A2267AC5500987BA8 /* LabelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelType.swift; sourceTree = "<group>"; };
+		8939DD702267ADCD00987BA8 /* MainVC+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainVC+UITableViewDelegate.swift"; sourceTree = "<group>"; };
 		89BC583B223C33A50025D7A2 /* Qaid Baloot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Qaid Baloot.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		89BC583E223C33A50025D7A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89BC5840223C33A50025D7A2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +47,7 @@
 		89BC585522419D4C0025D7A2 /* UIViewController+UIResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIResponder.swift"; sourceTree = "<group>"; };
 		89BC5857224551080025D7A2 /* SetupLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupLayout.swift; sourceTree = "<group>"; };
 		89BC5859224558040025D7A2 /* TextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDelegate.swift; sourceTree = "<group>"; };
+		89BC585F2245592B0025D7A2 /* MainAppButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +61,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8939DD6C2267AC8E00987BA8 /* textField */ = {
+			isa = PBXGroup;
+			children = (
+				89181163224AC7160011BCA1 /* MainAppTextField.swift */,
+				8939DD662267AC0D00987BA8 /* TextFieldType.swift */,
+			);
+			path = textField;
+			sourceTree = "<group>";
+		};
+		8939DD6D2267AC9E00987BA8 /* button */ = {
+			isa = PBXGroup;
+			children = (
+				89BC585F2245592B0025D7A2 /* MainAppButton.swift */,
+				8939DD682267AC2E00987BA8 /* AppButton.swift */,
+			);
+			path = button;
+			sourceTree = "<group>";
+		};
+		8939DD6E2267ACAC00987BA8 /* label */ = {
+			isa = PBXGroup;
+			children = (
+				89181161224AC6B30011BCA1 /* MainAppLabel.swift */,
+				8939DD6A2267AC5500987BA8 /* LabelType.swift */,
+			);
+			path = label;
+			sourceTree = "<group>";
+		};
+		8939DD6F2267ACBF00987BA8 /* tableView */ = {
+			isa = PBXGroup;
+			children = (
+				8939DD6222650FD600987BA8 /* ResultCell.swift */,
+				8939DD60225BCE8F00987BA8 /* ResultTableView.swift */,
+			);
+			path = tableView;
+			sourceTree = "<group>";
+		};
 		89BC5832223C33A50025D7A2 = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +131,8 @@
 			isa = PBXGroup;
 			children = (
 				89BC5840223C33A50025D7A2 /* MainViewController.swift */,
+				89BC5853223C349C0025D7A2 /* DataController.swift */,
+				8939DD702267ADCD00987BA8 /* MainVC+UITableViewDelegate.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -82,6 +140,10 @@
 		89BC585C2245586D0025D7A2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8939DD6D2267AC9E00987BA8 /* button */,
+				8939DD6E2267ACAC00987BA8 /* label */,
+				8939DD6C2267AC8E00987BA8 /* textField */,
+				8939DD6F2267ACBF00987BA8 /* tableView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -90,7 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				89BC5845223C33A50025D7A2 /* Qaid_Baloot.xcdatamodeld */,
-				89BC5853223C349C0025D7A2 /* DataController.swift */,
+				8939DD5C22589D8900987BA8 /* Result.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -177,10 +239,20 @@
 				89BC585622419D4C0025D7A2 /* UIViewController+UIResponder.swift in Sources */,
 				89BC5858224551080025D7A2 /* SetupLayout.swift in Sources */,
 				89BC5847223C33A50025D7A2 /* Qaid_Baloot.xcdatamodeld in Sources */,
+				8939DD61225BCE8F00987BA8 /* ResultTableView.swift in Sources */,
 				89BC585A224558040025D7A2 /* TextFieldDelegate.swift in Sources */,
+				89181164224AC7160011BCA1 /* MainAppTextField.swift in Sources */,
+				8939DD5D22589D8900987BA8 /* Result.swift in Sources */,
+				8939DD672267AC0D00987BA8 /* TextFieldType.swift in Sources */,
 				89BC5854223C349C0025D7A2 /* DataController.swift in Sources */,
+				8939DD692267AC2E00987BA8 /* AppButton.swift in Sources */,
 				89BC5841223C33A50025D7A2 /* MainViewController.swift in Sources */,
+				89181162224AC6B30011BCA1 /* MainAppLabel.swift in Sources */,
+				8939DD6B2267AC5500987BA8 /* LabelType.swift in Sources */,
 				89BC583F223C33A50025D7A2 /* AppDelegate.swift in Sources */,
+				8939DD712267ADCD00987BA8 /* MainVC+UITableViewDelegate.swift in Sources */,
+				8939DD6322650FD600987BA8 /* ResultCell.swift in Sources */,
+				89BC58602245592B0025D7A2 /* MainAppButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,7 +390,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.abdulaziz.alsallum.Qaid-Baloot";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -338,7 +410,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.abdulaziz.alsallum.Qaid-Baloot";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
