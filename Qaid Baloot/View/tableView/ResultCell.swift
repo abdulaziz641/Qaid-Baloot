@@ -12,7 +12,7 @@ class ResultCell: UITableViewCell {
     let ourResultLabel: UILabel = MainLabel(text: "", type: .defaultLabel)
     let theirResultLabel: UILabel = MainLabel(text: "", type: .defaultLabel)
     
-    let ourSeperatorView: UIView = {
+    var ourSeperatorView: UIView = {
         let sepView = UIView()
         sepView.backgroundColor = .white
         sepView.isHidden = true
@@ -20,7 +20,7 @@ class ResultCell: UITableViewCell {
         return sepView
     }()
     
-    let theirSeperatorView: UIView = {
+    var theirSeperatorView: UIView = {
         let sepView = UIView()
         sepView.backgroundColor = .white
         sepView.isHidden = true
@@ -35,7 +35,7 @@ class ResultCell: UITableViewCell {
         return cv
     }()
     
-    private var ourStackView: UIStackView!
+    var ourStackView: UIStackView!
     private var theirStackView: UIStackView!
     private var mainStackView: UIStackView!
     

@@ -15,22 +15,40 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return scoreBoard.count
+//        return scoreBoard.count
+        
+//        guard let resultData = currentResultData else {
+//            return 0
+//        }
+//        return resultData.count
+        return LibraryAPI.shared.getResults().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: usCellReuseIdentifier, for: indexPath) as! ResultCell
-        
-        if scoreBoard.count > 1 {
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.usCellReuseIdentifier, for: indexPath) as! ResultCell
+        if LibraryAPI.shared.getResults().count > 1 {
             cell.showSeperatorViews()
-            cell.ourResultLabel.text = String(scoreBoard[indexPath.row].usResult)
-            cell.theirResultLabel.text = String(scoreBoard[indexPath.row].themResult)
-            cell.ourResultLabel.text = String(scoreBoard[indexPath.row].usResult)
+            cell.ourResultLabel.text = String(LibraryAPI.shared.getResults()[indexPath.row].ourScore)
+            cell.theirResultLabel.text = String(LibraryAPI.shared.getResults()[indexPath.row].theirScore)
         } else {
-            cell.ourResultLabel.text = String(scoreBoard[indexPath.row].usResult)
-            cell.theirResultLabel.text = String(scoreBoard[indexPath.row].themResult)
+            cell.ourResultLabel.text = String(LibraryAPI.shared.getResults()[indexPath.row].ourScore)
+            cell.theirResultLabel.text = String(LibraryAPI.shared.getResults()[indexPath.row].theirScore)
         }
-        
         return cell
+    }
+    
+    func showDataForResult(at index: Int, for tableView: UITableView) {
+        
+        // defensive code: make sure the requested index is lower than the amount of resultss
+        if (index < allResults.count && index > -1) {
+            // fetch the result
+            let result = allResults[index]
+            // save the resultss data to present it later in the tableview
+            currentResultData = result.tableRepresentation
+        } else {
+            currentResultData = nil
+        }
+        // we have the data we need, let's refresh our tableview
+        reloadTableData(for: tableView)
     }
 }

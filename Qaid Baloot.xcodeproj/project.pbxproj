@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		89181162224AC6B30011BCA1 /* MainAppLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89181161224AC6B30011BCA1 /* MainAppLabel.swift */; };
 		89181164224AC7160011BCA1 /* MainAppTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89181163224AC7160011BCA1 /* MainAppTextField.swift */; };
+		892604AA2273207600FCB44B /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892604A92273207600FCB44B /* HeaderCell.swift */; };
+		892604AC2273368300FCB44B /* String+Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892604AB2273368300FCB44B /* String+Int.swift */; };
+		892604B32274632900FCB44B /* PersistencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892604B22274632900FCB44B /* PersistencyManager.swift */; };
+		892604B5227463FB00FCB44B /* LibraryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892604B4227463FB00FCB44B /* LibraryAPI.swift */; };
+		892604B7227464EC00FCB44B /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892604B6227464EC00FCB44B /* HTTPClient.swift */; };
 		8939DD5D22589D8900987BA8 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8939DD5C22589D8900987BA8 /* Result.swift */; };
 		8939DD61225BCE8F00987BA8 /* ResultTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8939DD60225BCE8F00987BA8 /* ResultTableView.swift */; };
 		8939DD6322650FD600987BA8 /* ResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8939DD6222650FD600987BA8 /* ResultCell.swift */; };
@@ -16,6 +21,8 @@
 		8939DD692267AC2E00987BA8 /* AppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8939DD682267AC2E00987BA8 /* AppButton.swift */; };
 		8939DD6B2267AC5500987BA8 /* LabelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8939DD6A2267AC5500987BA8 /* LabelType.swift */; };
 		8939DD712267ADCD00987BA8 /* MainVC+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8939DD702267ADCD00987BA8 /* MainVC+UITableViewDelegate.swift */; };
+		894E919F227F64E200917A06 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894E919E227F64E200917A06 /* Constants.swift */; };
+		894E91A72280E3D100917A06 /* Qaid_BalootUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894E91A62280E3D100917A06 /* Qaid_BalootUITests.swift */; };
 		89BC583F223C33A50025D7A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BC583E223C33A50025D7A2 /* AppDelegate.swift */; };
 		89BC5841223C33A50025D7A2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BC5840223C33A50025D7A2 /* MainViewController.swift */; };
 		89BC5847223C33A50025D7A2 /* Qaid_Baloot.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 89BC5845223C33A50025D7A2 /* Qaid_Baloot.xcdatamodeld */; };
@@ -27,9 +34,24 @@
 		89BC58602245592B0025D7A2 /* MainAppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BC585F2245592B0025D7A2 /* MainAppButton.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		894E91A92280E3D100917A06 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 89BC5833223C33A50025D7A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 89BC583A223C33A50025D7A2;
+			remoteInfo = "Qaid Baloot";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		89181161224AC6B30011BCA1 /* MainAppLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppLabel.swift; sourceTree = "<group>"; };
 		89181163224AC7160011BCA1 /* MainAppTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppTextField.swift; sourceTree = "<group>"; };
+		892604A92273207600FCB44B /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
+		892604AB2273368300FCB44B /* String+Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Int.swift"; sourceTree = "<group>"; };
+		892604B22274632900FCB44B /* PersistencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistencyManager.swift; sourceTree = "<group>"; };
+		892604B4227463FB00FCB44B /* LibraryAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryAPI.swift; sourceTree = "<group>"; };
+		892604B6227464EC00FCB44B /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		8939DD5C22589D8900987BA8 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		8939DD60225BCE8F00987BA8 /* ResultTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableView.swift; sourceTree = "<group>"; };
 		8939DD6222650FD600987BA8 /* ResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCell.swift; sourceTree = "<group>"; };
@@ -37,6 +59,10 @@
 		8939DD682267AC2E00987BA8 /* AppButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppButton.swift; sourceTree = "<group>"; };
 		8939DD6A2267AC5500987BA8 /* LabelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelType.swift; sourceTree = "<group>"; };
 		8939DD702267ADCD00987BA8 /* MainVC+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainVC+UITableViewDelegate.swift"; sourceTree = "<group>"; };
+		894E919E227F64E200917A06 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		894E91A42280E3D100917A06 /* Qaid BalootUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Qaid BalootUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		894E91A62280E3D100917A06 /* Qaid_BalootUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Qaid_BalootUITests.swift; sourceTree = "<group>"; };
+		894E91A82280E3D100917A06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89BC583B223C33A50025D7A2 /* Qaid Baloot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Qaid Baloot.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		89BC583E223C33A50025D7A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89BC5840223C33A50025D7A2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +77,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		894E91A12280E3D100917A06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		89BC5838223C33A50025D7A2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -61,6 +94,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		892604B12274631F00FCB44B /* API */ = {
+			isa = PBXGroup;
+			children = (
+				892604B22274632900FCB44B /* PersistencyManager.swift */,
+				892604B4227463FB00FCB44B /* LibraryAPI.swift */,
+				892604B6227464EC00FCB44B /* HTTPClient.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		8939DD6C2267AC8E00987BA8 /* textField */ = {
 			isa = PBXGroup;
 			children = (
@@ -93,14 +136,25 @@
 			children = (
 				8939DD6222650FD600987BA8 /* ResultCell.swift */,
 				8939DD60225BCE8F00987BA8 /* ResultTableView.swift */,
+				892604A92273207600FCB44B /* HeaderCell.swift */,
 			);
 			path = tableView;
+			sourceTree = "<group>";
+		};
+		894E91A52280E3D100917A06 /* Qaid BalootUITests */ = {
+			isa = PBXGroup;
+			children = (
+				894E91A62280E3D100917A06 /* Qaid_BalootUITests.swift */,
+				894E91A82280E3D100917A06 /* Info.plist */,
+			);
+			path = "Qaid BalootUITests";
 			sourceTree = "<group>";
 		};
 		89BC5832223C33A50025D7A2 = {
 			isa = PBXGroup;
 			children = (
 				89BC583D223C33A50025D7A2 /* Qaid Baloot */,
+				894E91A52280E3D100917A06 /* Qaid BalootUITests */,
 				89BC583C223C33A50025D7A2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -109,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				89BC583B223C33A50025D7A2 /* Qaid Baloot.app */,
+				894E91A42280E3D100917A06 /* Qaid BalootUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,10 +171,11 @@
 		89BC583D223C33A50025D7A2 /* Qaid Baloot */ = {
 			isa = PBXGroup;
 			children = (
-				89BC585E224558950025D7A2 /* Extensions */,
-				89BC585D224558720025D7A2 /* Model */,
-				89BC585C2245586D0025D7A2 /* View */,
+				892604B12274631F00FCB44B /* API */,
 				89BC585B224558660025D7A2 /* Controller */,
+				89BC585D224558720025D7A2 /* Model */,
+				89BC585E224558950025D7A2 /* Extensions */,
+				89BC585C2245586D0025D7A2 /* View */,
 				89BC583E223C33A50025D7A2 /* AppDelegate.swift */,
 				89BC5848223C33A60025D7A2 /* Assets.xcassets */,
 				89BC584D223C33A60025D7A2 /* Info.plist */,
@@ -144,6 +200,7 @@
 				8939DD6E2267ACAC00987BA8 /* label */,
 				8939DD6C2267AC8E00987BA8 /* textField */,
 				8939DD6F2267ACBF00987BA8 /* tableView */,
+				894E919E227F64E200917A06 /* Constants.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -163,6 +220,7 @@
 				89BC5857224551080025D7A2 /* SetupLayout.swift */,
 				89BC5859224558040025D7A2 /* TextFieldDelegate.swift */,
 				89BC585522419D4C0025D7A2 /* UIViewController+UIResponder.swift */,
+				892604AB2273368300FCB44B /* String+Int.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -170,6 +228,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		894E91A32280E3D100917A06 /* Qaid BalootUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 894E91AB2280E3D100917A06 /* Build configuration list for PBXNativeTarget "Qaid BalootUITests" */;
+			buildPhases = (
+				894E91A02280E3D100917A06 /* Sources */,
+				894E91A12280E3D100917A06 /* Frameworks */,
+				894E91A22280E3D100917A06 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				894E91AA2280E3D100917A06 /* PBXTargetDependency */,
+			);
+			name = "Qaid BalootUITests";
+			productName = "Qaid BalootUITests";
+			productReference = 894E91A42280E3D100917A06 /* Qaid BalootUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		89BC583A223C33A50025D7A2 /* Qaid Baloot */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 89BC5850223C33A60025D7A2 /* Build configuration list for PBXNativeTarget "Qaid Baloot" */;
@@ -193,10 +269,14 @@
 		89BC5833223C33A50025D7A2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1010;
+				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Abdulaziz Alsaloum";
 				TargetAttributes = {
+					894E91A32280E3D100917A06 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 89BC583A223C33A50025D7A2;
+					};
 					89BC583A223C33A50025D7A2 = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -216,11 +296,19 @@
 			projectRoot = "";
 			targets = (
 				89BC583A223C33A50025D7A2 /* Qaid Baloot */,
+				894E91A32280E3D100917A06 /* Qaid BalootUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		894E91A22280E3D100917A06 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		89BC5839223C33A50025D7A2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -232,6 +320,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		894E91A02280E3D100917A06 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				894E91A72280E3D100917A06 /* Qaid_BalootUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		89BC5837223C33A50025D7A2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -240,6 +336,10 @@
 				89BC5858224551080025D7A2 /* SetupLayout.swift in Sources */,
 				89BC5847223C33A50025D7A2 /* Qaid_Baloot.xcdatamodeld in Sources */,
 				8939DD61225BCE8F00987BA8 /* ResultTableView.swift in Sources */,
+				892604AC2273368300FCB44B /* String+Int.swift in Sources */,
+				892604AA2273207600FCB44B /* HeaderCell.swift in Sources */,
+				894E919F227F64E200917A06 /* Constants.swift in Sources */,
+				892604B7227464EC00FCB44B /* HTTPClient.swift in Sources */,
 				89BC585A224558040025D7A2 /* TextFieldDelegate.swift in Sources */,
 				89181164224AC7160011BCA1 /* MainAppTextField.swift in Sources */,
 				8939DD5D22589D8900987BA8 /* Result.swift in Sources */,
@@ -249,16 +349,66 @@
 				89BC5841223C33A50025D7A2 /* MainViewController.swift in Sources */,
 				89181162224AC6B30011BCA1 /* MainAppLabel.swift in Sources */,
 				8939DD6B2267AC5500987BA8 /* LabelType.swift in Sources */,
+				892604B32274632900FCB44B /* PersistencyManager.swift in Sources */,
 				89BC583F223C33A50025D7A2 /* AppDelegate.swift in Sources */,
 				8939DD712267ADCD00987BA8 /* MainVC+UITableViewDelegate.swift in Sources */,
 				8939DD6322650FD600987BA8 /* ResultCell.swift in Sources */,
 				89BC58602245592B0025D7A2 /* MainAppButton.swift in Sources */,
+				892604B5227463FB00FCB44B /* LibraryAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		894E91AA2280E3D100917A06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 89BC583A223C33A50025D7A2 /* Qaid Baloot */;
+			targetProxy = 894E91A92280E3D100917A06 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		894E91AC2280E3D100917A06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z6LH8E5WW3;
+				INFOPLIST_FILE = "Qaid BalootUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.abdulaziz.alsallum.Qaid-BalootUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Qaid Baloot";
+			};
+			name = Debug;
+		};
+		894E91AD2280E3D100917A06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z6LH8E5WW3;
+				INFOPLIST_FILE = "Qaid BalootUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.abdulaziz.alsallum.Qaid-BalootUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Qaid Baloot";
+			};
+			name = Release;
+		};
 		89BC584E223C33A60025D7A2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -383,6 +533,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z6LH8E5WW3;
 				INFOPLIST_FILE = "Qaid Baloot/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -403,6 +554,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z6LH8E5WW3;
 				INFOPLIST_FILE = "Qaid Baloot/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -418,6 +570,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		894E91AB2280E3D100917A06 /* Build configuration list for PBXNativeTarget "Qaid BalootUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				894E91AC2280E3D100917A06 /* Debug */,
+				894E91AD2280E3D100917A06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		89BC5836223C33A50025D7A2 /* Build configuration list for PBXProject "Qaid Baloot" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

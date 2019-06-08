@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainViewController
 //  Qaid Baloot
 //
 //  Created by Abdulaziz Alsaloum on 15/03/2019.
@@ -9,6 +9,10 @@
 import UIKit
 
 class MainViewController: UIViewController {
+    
+    private var currentResultIndex = 0
+    var currentResultData: [ResultData]?
+    var allResults = [Result]()
     
     //MARK: UI Views
     var topViewContainerView: UIView!
@@ -24,10 +28,6 @@ class MainViewController: UIViewController {
     
     var usTableView = ResultTableView()
     var theirTableView = ResultTableView()
-    let usCellReuseIdentifier = "usReuseIdentifier"
-    let themCellReuseIdentifier = "themReuseIdentifier"
-    
-    var scoreBoard: [Result]!
     
     let mainViewImageView: UIImageView = {
         let iv = UIImageView()
@@ -65,50 +65,56 @@ class MainViewController: UIViewController {
         setupLayout()
         setupTableView()
         recordResultButton.addTarget(self, action: #selector(setResult), for: .touchUpInside)
+        allResults = LibraryAPI.shared.getResults()
+        showDataForResult(at: currentResultIndex, for: usTableView)
     }
     
     @objc private func setResult() {
         let usResult = Int(ourTextField.text!)!
         let themResult = Int(theirTextField.text!)!
-        var roundResult = Result(usResult: usResult, themResult: themResult)
-        var previousRoundResult = Result(usResult: 0, themResult: 0)
+        var roundResult = Result(ourScore: usResult, theirScore: themResult)
+        var previousRoundResult = Result(ourScore: 0, theirScore: 0)
+        
+        guard (ourTextField.text != "0"  && theirTextField.text != "0") else {
+            showAlert(title: "انتبه يالحبيب !", message: "ما يصلح تسجل صفر", buttonText: "سم ")
+            return
+        }
         
         if isNewGame {
-            scoreBoard.append(roundResult)
-            reloadTableData()
+            LibraryAPI.shared.addResult(roundResult, at: 0)
+            reloadTableData(for: usTableView)
             round += 1
             isNewGame = false
         } else {
-            if scoreBoard.count == 1 {
-                previousRoundResult = scoreBoard[0]
+            if LibraryAPI.shared.getResults().count == 1 {
+                previousRoundResult = LibraryAPI.shared.getResults()[0]
             } else {
-                previousRoundResult = scoreBoard[round - 1]
+                previousRoundResult = LibraryAPI.shared.getResults()[round - 1]
             }
             
             roundResult = roundResult + previousRoundResult
-            scoreBoard.append(roundResult)
-            reloadTableData()
+            LibraryAPI.shared.addResult(roundResult, at: 1)
+            reloadTableData(for: usTableView)
             round += 1
         }
-        setResultLabels(ourResult: String(roundResult.usResult), theirResult: String(roundResult.themResult))
+        setResultLabels(ourResult: String(roundResult.ourScore), theirResult: String(roundResult.theirScore))
         resetTextFields()
     }
     
     private func setupTableView() {
-        configure(tableView: usTableView, with: ResultCell.self, and: usCellReuseIdentifier, with: self, and: self)
-        scoreBoard = []
+        configure(tableView: usTableView, with: ResultCell.self, and: Constants.usCellReuseIdentifier, with: self, and: self)
     }
     
     private func configure(tableView: UITableView, with cell: UITableViewCell.Type, and reueIdentifier: String, with dataSource: UITableViewDataSource, and delegate: UITableViewDelegate) {
-        usTableView.delegate = delegate
-        usTableView.dataSource = dataSource
-        usTableView.register(cell, forCellReuseIdentifier: usCellReuseIdentifier)
+        tableView.delegate = delegate
+        tableView.dataSource = dataSource
+        tableView.register(cell, forCellReuseIdentifier: reueIdentifier)
     }
     
-    private func reloadTableData() {
-        if scoreBoard.count > 0 {
-            usTableView.reloadData()
-            usTableView.scrollToRow(at: IndexPath(item:scoreBoard.count - 1, section: 0), at: .bottom, animated: true)
+    func reloadTableData(for tableView: UITableView) {
+        if LibraryAPI.shared.getResults().count > 0 {
+            tableView.reloadData()
+            tableView.scrollToRow(at: IndexPath(item: LibraryAPI.shared.getResults().count - 1, section: 0), at: .bottom, animated: true)
         }
     }
     
@@ -120,19 +126,5 @@ class MainViewController: UIViewController {
     private func setResultLabels(ourResult: String, theirResult: String) {
         ourResultLabel.text = ourResult
         theirResultLabel.text = theirResult
-    }
-    
-    private func getAttributes() -> [NSAttributedString.Key: Any] {
-        let font = UIFont.systemFont(ofSize: 22)
-        let color = UIColor.white
-        let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.alignment = .center
-        
-        let attributes: [NSAttributedString.Key: Any] = [
-            .font: font,
-            .foregroundColor: color,
-            .paragraphStyle: paragraphStyle
-        ]
-        return attributes
     }
 }

@@ -161,7 +161,7 @@ extension MainViewController {
     }
     
     fileprivate func setupThemUsStackView() {
-        themUsStackView = UIStackView(arrangedSubviews: [ourStackView, themStackView])
+        themUsStackView = UIStackView(arrangedSubviews: [themStackView, ourStackView])
         themUsStackView.axis = .horizontal
         themUsStackView.alignment = .center
         themUsStackView.distribution = .equalCentering
@@ -208,5 +208,19 @@ extension MainViewController {
         scoreViewContainer.backgroundColor = .clear
         ourViewContainer.backgroundColor = .clear
         theirViewContainer.backgroundColor = .clear
+    }
+    
+    private func getAttributes() -> [NSAttributedString.Key: Any] {
+        let font = UIFont.systemFont(ofSize: 22)
+        let color = UIColor.white
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.alignment = .center
+        
+        let attributes: [NSAttributedString.Key: Any] = [
+            .font: font,
+            .foregroundColor: color,
+            .paragraphStyle: paragraphStyle
+        ]
+        return attributes
     }
 }

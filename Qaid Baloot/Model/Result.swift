@@ -9,14 +9,31 @@
 import Foundation
 
 struct Result: Equatable {
-    let usResult: Int
-    let themResult: Int
+    let ourScore: Int
+    let theirScore: Int
     
     func calculateResult() -> (Int, Int) {
-        return (usResult, themResult)
+        return (ourScore, theirScore)
     }
     
     static func +(lhs: Result, rhs: Result) -> Result {
-        return Result(usResult: lhs.usResult + rhs.usResult, themResult: lhs.themResult + rhs.themResult)
+        return Result(ourScore: lhs.ourScore + rhs.ourScore, theirScore: lhs.theirScore + rhs.theirScore)
+    }
+}
+
+extension Result: CustomStringConvertible {
+    var description: String {
+        return "ourScore: \(ourScore) theirScore: \(theirScore)"
+    }
+}
+
+typealias ResultData = (ourResult: String, theirResult: String)
+
+extension Result {
+    var tableRepresentation: [ResultData] {
+        return [
+            ("ourResult", String(ourScore)),
+            ("theirResult", String(theirScore))
+        ]
     }
 }
