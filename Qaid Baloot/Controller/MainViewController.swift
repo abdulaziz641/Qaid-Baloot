@@ -65,7 +65,7 @@ class MainViewController: UIViewController {
         setupLayout()
         setupTableView()
         recordResultButton.addTarget(self, action: #selector(setResult), for: .touchUpInside)
-        allResults = LibraryAPI.shared.getResults()
+        allResults = ResultAPI.shared.getResults()
         showDataForResult(at: currentResultIndex, for: usTableView)
     }
     
@@ -81,19 +81,19 @@ class MainViewController: UIViewController {
         }
         
         if isNewGame {
-            LibraryAPI.shared.addResult(roundResult, at: 0)
+            ResultAPI.shared.addResult(roundResult, at: 0)
             reloadTableData(for: usTableView)
             round += 1
             isNewGame = false
         } else {
-            if LibraryAPI.shared.getResults().count == 1 {
-                previousRoundResult = LibraryAPI.shared.getResults()[0]
+            if ResultAPI.shared.getResults().count == 1 {
+                previousRoundResult = ResultAPI.shared.getResults()[0]
             } else {
-                previousRoundResult = LibraryAPI.shared.getResults()[round - 1]
+                previousRoundResult = ResultAPI.shared.getResults()[round - 1]
             }
             
             roundResult = roundResult + previousRoundResult
-            LibraryAPI.shared.addResult(roundResult, at: 1)
+            ResultAPI.shared.addResult(roundResult, at: 1)
             reloadTableData(for: usTableView)
             round += 1
         }
@@ -112,9 +112,9 @@ class MainViewController: UIViewController {
     }
     
     func reloadTableData(for tableView: UITableView) {
-        if LibraryAPI.shared.getResults().count > 0 {
+        if ResultAPI.shared.getResults().count > 0 {
             tableView.reloadData()
-            tableView.scrollToRow(at: IndexPath(item: LibraryAPI.shared.getResults().count - 1, section: 0), at: .bottom, animated: true)
+            tableView.scrollToRow(at: IndexPath(item: ResultAPI.shared.getResults().count - 1, section: 0), at: .bottom, animated: true)
         }
     }
     

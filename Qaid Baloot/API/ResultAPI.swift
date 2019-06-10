@@ -8,9 +8,9 @@
 
 import Foundation
 
-final class LibraryAPI {
+final class ResultAPI {
     
-    static let shared = LibraryAPI()
+    static let shared = ResultAPI()
     private let persistencyManager = PersistencyManager()
     private let httpClient = HTTPClient()
     private let isOnline = false

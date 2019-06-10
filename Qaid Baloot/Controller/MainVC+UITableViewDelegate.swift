@@ -21,18 +21,15 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 //            return 0
 //        }
 //        return resultData.count
-        return LibraryAPI.shared.getResults().count
+        return ResultAPI.shared.getResults().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.usCellReuseIdentifier, for: indexPath) as! ResultCell
-        if LibraryAPI.shared.getResults().count > 1 {
+        cell.ourResultLabel.text = String(ResultAPI.shared.getResults()[indexPath.row].ourScore)
+        cell.theirResultLabel.text = String(ResultAPI.shared.getResults()[indexPath.row].theirScore)
+        if ResultAPI.shared.getResults().count > 1 {
             cell.showSeperatorViews()
-            cell.ourResultLabel.text = String(LibraryAPI.shared.getResults()[indexPath.row].ourScore)
-            cell.theirResultLabel.text = String(LibraryAPI.shared.getResults()[indexPath.row].theirScore)
-        } else {
-            cell.ourResultLabel.text = String(LibraryAPI.shared.getResults()[indexPath.row].ourScore)
-            cell.theirResultLabel.text = String(LibraryAPI.shared.getResults()[indexPath.row].theirScore)
         }
         return cell
     }
